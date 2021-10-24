@@ -14,18 +14,18 @@ ARG BASE_CONTAINER=ucsdets/datascience-notebook:2021.2-stable
 
 FROM $BASE_CONTAINER
 
-LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
+LABEL maintainer="Cameron Shaw <c8shaw@ucsd.edu>"
 
 # 2) change to root to install packages
 USER root
 
-RUN apt-get -y install htop && \
-    apt-get -y install aria2 && \
-    apt-get -y intall nmap && \
-    apt-get -y install traceroute
+RUN apt-get -y install htop \
+    aria2 \
+    nmap \
+    traceroute
 
 # 3) install packages using notebook user
-USER jovyan
+USER c8shaw
 
 # RUN conda install -y scikit-learn
 
