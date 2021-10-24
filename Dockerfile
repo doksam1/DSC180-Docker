@@ -25,7 +25,7 @@ RUN apt-get -y install htop \
     traceroute
 
 # 3) install packages using notebook user
-USER doksam
+USER jovyan
 
 # RUN conda install -y scikit-learn
 
