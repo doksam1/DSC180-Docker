@@ -2,11 +2,11 @@
 # generally use the most recent tag
 
 # base notebook, contains Jupyter and relevant tools
-ARG BASE_CONTAINER=ucsdets/datahub-base-notebook:2021.2-stable
+# ARG BASE_CONTAINER=ucsdets/datahub-base-notebook:2021.2-stable
 
 # data science notebook
 # https://hub.docker.com/repository/docker/ucsdets/datascience-notebook/tags
-# ARG BASE_CONTAINER=ucsdets/datascience-notebook:2021.2-stable
+ARG BASE_CONTAINER=ucsdets/datascience-notebook:2021.2-stable
 
 # scipy/machine learning (tensorflow, pytorch)
 # https://hub.docker.com/repository/docker/ucsdets/scipy-ml-notebook/tags
@@ -20,6 +20,7 @@ LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
 USER root
 
 RUN apt-get -y install htop
+
 
 # 3) install packages using notebook user
 USER jovyan
