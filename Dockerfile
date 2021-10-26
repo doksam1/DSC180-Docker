@@ -22,7 +22,11 @@ USER root
 RUN apt-get -y install htop \
     aria2 \
     nmap \
-    traceroute
+    traceroute \
+    g++-4.8 \
+    openjdk-8-jdk \
+    curl
+
 
 # 3) install packages using notebook user
 USER jovyan
